@@ -1,6 +1,6 @@
 package br.com.musica.escola;
 
-//Interface para o padrão Observer
+//interface para o padrao observer
 public interface Observador {
  void atualizar(String mensagem);
 }
