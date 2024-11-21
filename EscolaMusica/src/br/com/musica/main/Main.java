@@ -9,6 +9,7 @@ public class Main {
 
         Aluno aluno1 = new Aluno("Caroline", 21, "Taguatinga", "Piano");
         Professor professor1 = new Professor("bruno", 20, "Aguas Claras", "Violão");
+        Professor professor2 = new Professor("davi", 20, "Aguas Claras", "Bateria");
 //adiciona aluno e professor como observadores do Gerenciador de Aulas (Observer)
         gerenciador.adicionarObservador(aluno1);
         gerenciador.adicionarObservador(professor1);
