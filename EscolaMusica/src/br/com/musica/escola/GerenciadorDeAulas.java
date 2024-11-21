@@ -8,7 +8,7 @@ public class GerenciadorDeAulas {
     private static GerenciadorDeAulas instancia;
     private List<String> aulasAgendadas;
     private List<Observador> observadores;
-
+//construtor privado para garantir que a classe siga o padrão Singleton.
     private GerenciadorDeAulas() {
         aulasAgendadas = new ArrayList<>();
         observadores = new ArrayList<>();
@@ -20,7 +20,7 @@ public class GerenciadorDeAulas {
         }
         return instancia;
     }
-
+//agenda aula e notifica os observadores
     public void agendarAula(String aula) {
         if (aula == null || aula.isEmpty()) {
             throw new IllegalArgumentException("Aula inválida!");
@@ -28,7 +28,7 @@ public class GerenciadorDeAulas {
         aulasAgendadas.add(aula);
         notificarObservadores("Nova aula agendada: " + aula);
     }
-
+// cancela aula e notifica os observadores
     public void cancelarAula(String aula) {
         if (aulasAgendadas.remove(aula)) {
             notificarObservadores("Aula cancelada: " + aula);
@@ -36,17 +36,17 @@ public class GerenciadorDeAulas {
             System.out.println("Aula não encontrada para cancelamento.");
         }
     }
-
+// adiciona o observer na lista de notificacoes
     public void adicionarObservador(Observador obs) {
         observadores.add(obs);
     }
-
+// notifica sobre alguma mudanca
     private void notificarObservadores(String mensagem) {
         for (Observador obs : observadores) {
             obs.atualizar(mensagem);
         }
     }
-
+// lista as aulas agendadas 
     public void listarAulas() {
         System.out.println("Aulas agendadas:");
         for (String aula : aulasAgendadas) {
