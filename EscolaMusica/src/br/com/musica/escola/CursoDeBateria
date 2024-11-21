@@ -1,0 +1,8 @@
+package br.com.musica.escola;
+
+public class CursoDeBateria extends Curso {
+
+    public CursoDeBateria() {
+        super("Curso de Bateria");
+    }
+}
