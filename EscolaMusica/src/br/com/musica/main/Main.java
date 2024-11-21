@@ -15,7 +15,9 @@ public class Main {
 //notifica os observadores sobre agendamento e cancelamentos das aulas 
         gerenciador.agendarAula("Aula de Piano - 10:00");
         gerenciador.agendarAula("Aula de Violão - 14:00");
+         gerenciador.agendarAula("Aula de Bateria - 16:00");
         gerenciador.cancelarAula("Aula de Piano - 10:00");
+         
 //exibe aulas agendadas
         gerenciador.listarAulas();
 // simula inscricao e cancelamento por parte do aluno
